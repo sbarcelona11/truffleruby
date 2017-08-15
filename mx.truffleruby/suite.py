@@ -105,28 +105,6 @@ suite = {
             "licence": "Apache-2.0"
         },
 
-        "JFFI": {
-            "maven": {
-                "groupId": "com.github.jnr",
-                "artifactId": "jffi",
-                "version": "1.2.13"
-            },
-            "sha1": "8926bd0b2d0e9a46e7607eb7866356845c7df9a2",
-            "sourceSha1": "691ec868b9569092687553a8099a28f71f175097",
-            "licence": "Apache-2.0"
-        },
-
-        "JFFI_NATIVE": {
-            "maven": {
-                "groupId": "com.github.jnr",
-                "artifactId": "jffi",
-                "version": "1.2.13",
-                "suffix": "native"
-            },
-            "sha1": "c4b81ddacd1e94a73780aa6e4e8b9d2945d5eb4c",
-            "licenses": ["Apache-2.0", "MIT"]
-        },
-
         "SNAKEYAML": {
             "maven": {
                 "groupId": "org.yaml",
@@ -198,8 +176,6 @@ suite = {
                 "JNR_POSIX",
                 "JNR_CONSTANTS",
                 "JNR_FFI",
-                "JFFI",
-                "JFFI_NATIVE",
                 "SNAKEYAML",
                 "JONI",
                 "JCODINGS",

@@ -9,8 +9,6 @@
  */
 package org.truffleruby.platform.posix;
 
-import com.kenai.jffi.Platform;
-import com.kenai.jffi.Platform.OS;
 import com.oracle.truffle.api.CompilerDirectives.TruffleBoundary;
 import jnr.constants.platform.Fcntl;
 import jnr.constants.platform.Signal;
@@ -344,7 +342,7 @@ public class JNRTrufflePosix implements TrufflePosix {
             Collection<? extends CharSequence> envp) {
         final long pid = posix.posix_spawnp(path, fileActions, spawnAttributes, argv, envp);
         // posix_spawnp() is declared as int return value, but jnr-posix declares as long.
-        if (Platform.getPlatform().getOS() == OS.SOLARIS) {
+        if (false) { // if (Platform.getPlatform().getOS() == OS.SOLARIS) {
             // Solaris/SPARCv9 has the int value in the wrong half.
             // Due to big endian, we need to take the other half.
             return (int) (pid >> 32);
